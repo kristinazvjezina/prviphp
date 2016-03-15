@@ -8,14 +8,21 @@
 <body>
 <h1>Prvi PHP</h1>
 
-
 <?php
-echo('Vaše ime: ' . htmlspecialchars($_POST['ime']));
 
-$rezultat = $_POST['broj1'] + $_POST['broj2'] + $_POST['broj3'];
-echo('<br>' . $rezultat);
+$cijena = $_POST['broj_litara'] * 8.5;
+echo('Cijena goriva:' . $cijena . 'kn');
+
+if ($cijena > 500) {
+
+    echo('<br>Pa to ćemo morati uzeti na rate!');
+}
+if ($cijena < 500)
+    echo('<br> Daj,siću!');
+
 ?>
 
 
 </body>
 </html>
+
